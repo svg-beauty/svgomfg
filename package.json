@@ -40,11 +40,11 @@
     "build": "gulp clean-build",
     "start": "sirv build --port 8080 --dev --no-clear",
     "dev": "gulp dev",
-    "lint": "npm run lint:js && npm run lint:css",
+    "lint": "nr lint:js && nr lint:css",
     "lint:css": "stylelint src/css/ --rd --risd",
     "lint:js": "xo",
     "fix": "xo --fix",
-    "test": "npm run lint && npm run build"
+    "test": "nr lint && nr build"
   },
   "prettier": {
     "bracketSpacing": true,
