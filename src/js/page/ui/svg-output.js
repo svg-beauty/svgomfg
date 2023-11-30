@@ -27,11 +27,11 @@ export default class SvgOutput {
     // I would rather use blob urls, but they don't work in Firefox
     // All the internal refs break.
     // https://bugzilla.mozilla.org/show_bug.cgi?id=1125667
-    const nextLoad = this._nextLoadPromise();
-    this._svgFrame.src = `data:image/svg+xml,${encodeURIComponent(text)}`;
-    this._svgFrame.style.width = `${width}px`;
-    this._svgFrame.style.height = `${height}px`;
-    return nextLoad;
+    const nextLoad = this._nextLoadPromise()
+    this._svgFrame.src = `data:image/svg+xml,${encodeURIComponent(text)}`
+    this._svgFrame.style.width = `${width}px`
+    this._svgFrame.style.height = `${height}px`
+    return nextLoad
   }
 
   reset() {
