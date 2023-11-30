@@ -35,4 +35,5 @@ v1.17.0
 - "Update to SVGO v3.0.4",
 - "New optimisation: Convert one-stop gradients",
 - "New optimisation: Remove XLink namespace"
+- "Add docker container features"
 - "Fix many lint errors and PWA install"
