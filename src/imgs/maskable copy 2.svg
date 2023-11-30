@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <path fill="#b00" d="M0 0h100v100H0z" />
-  <path fill="#f22" d="M0 0h108v66.76H0z" />
-  <path fill-opacity=".22" d="m50 85 33-18H50v18zm-7.32-58.46H83.2v40.48H42.58V26.25z" />
-  <path fill="#fff" d="M25 60H50V85H25z" />
-</svg>

@@ -1,5 +1,6 @@
 .settings {
   background-color: #fff;
+  border-radius: 4px;
   display: flex;
   flex-flow: column;
   @include user-select(none);
@@ -16,7 +17,7 @@
   position: relative;
   cursor: pointer;
   padding: 0 16px;
-  height: 51px;
+  height: 40px;
   display: grid;
   grid-template-columns: max-content 1fr;
   align-items: center;

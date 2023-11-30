@@ -43,10 +43,7 @@ function compress(svgInput, settings) {
       params: {},
     }
 
-    // TODO: revisit this
-    // 0 almost always breaks images when used on `cleanupNumericValues`.
-    // Better to allow 0 for everything else, but switch to 1 for this plugin.
-    plugin.params.floatPrecision = plugin.name === 'cleanupNumericValues' && floatPrecision === 0 ? 1 : floatPrecision
+    plugin.params.floatPrecision = floatPrecision // Remove the switch to 1 precision
 
     plugin.params.transformPrecision = transformPrecision
 

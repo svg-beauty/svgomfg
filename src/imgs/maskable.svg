@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108">
-  <path fill="#b00" fill-rule="nonzero" d="M0 0h108v108H0z" />
-  <path fill="#f22" fill-rule="nonzero" d="M0 0h108v66.76H0z" />
-  <path fill-opacity=".22" fill-rule="nonzero" d="m49.9 84.71 33.3-17.98H49.9v17.98zm-7.32-58.46H83.2v40.48H42.58V26.25z" />
-  <path fill="#fff" fill-rule="nonzero" d="M24.67 59.57H49.9V84.7H24.67z" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108"><path fill="#b00" d="M0 0h108v108H0z"/><path fill="#f22" d="M0 0h108v66.8H0z"/><path fill-opacity=".2" d="m49.9 84.7 33.3-18H49.9zm-7.3-58.5h40.6v40.5H42.6V26.3z"/><path fill="#fff" d="M24.7 59.6h25.2v25.1H24.7z"/></svg>

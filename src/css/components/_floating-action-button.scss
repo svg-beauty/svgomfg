@@ -7,7 +7,6 @@
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  z-index: 0; // Is this really needed?
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,6 +18,8 @@
 
   &:hover,
   &.key-focused {
+    background-color: red;
+    color: #fff;
     transform: scale(1.15);
   }
 
@@ -51,7 +52,7 @@
     width: 56px;
     height: 56px;
     border-radius: 28px;
-    background-color: #fff;
+    background-color: red;
 
     .icon {
       fill: #fff;

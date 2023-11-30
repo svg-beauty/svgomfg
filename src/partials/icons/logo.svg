@@ -1,6 +1,1 @@
-<svg class="logo" viewBox="0 0 600 600">
-  <path fill="#B00000" d="M0 1.995h600V600H0z" />
-  <path fill="#FF172D" d="M0 0h600v395.68H0z" />
-  <path d="M269.224 530.33 519 395.485H269.224V530.33zM214.35 91.847H519v303.638H214.35V91.847z" opacity=".22" />
-  <path fill="#fff" d="M80 341.735h189.224V530.33H80z" />
-</svg>
+<svg class="logo" viewBox="0 0 600 600"><path fill="#B00" d="M0 2h600v600H0z"/><path fill="#F12" d="M0 0h600v396H0z"/><path d="m269 530 250-135H269zM214 92h305v303H214z" opacity=".2"/><path fill="#fff" d="M80 342h189v188H80z"/></svg>
