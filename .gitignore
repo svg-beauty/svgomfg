@@ -1,3 +1,5 @@
-/.netlify/
-/build/
-/node_modules/
+.cache
+.env
+.vercel
+build/
+node_modules/

@@ -1,21 +1,36 @@
-# SVGOMG!
+# 😲SVGOMFG‼️
 
-[SVGOMG](https://jakearchibald.github.io/svgomg/) is **[SVGO](https://github.com/svg/svgo)**'s **M**issing **G**UI, aiming to expose the majority, if not all the configuration options of SVGO.
+[![SVGO v3.0.4](https://img.shields.io/badge/svgo-v3.0.4-blue)](https://svgo.dev)
+[![Code Style Standard](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+[`SVGOMFG`](http://omfg.svg.beauty) is **[`SVGO`](https://svgo.dev)**'s **M**issing **F**uture-proof **G**UI, aiming to expose the majority, if not all the configuration options of the latest SVGO.
 
 ## Feature requests
 
-[Check out the issues](https://github.com/jakearchibald/svgomg/issues) to see what's planned, or suggest ideas of your own!
+[Check out the issues](https://github.com/svg-beauty/svgofmg/issues) to see what's planned, or suggest ideas of your own!
 
 ## Running locally
 
 Install dependencies:
 
 ```sh
-npm install
+bun install
 ```
 
 Run dev server:
 
 ```sh
-npm run dev
+bun run dev
 ```
+
+## Aknowledgement
+
+This is a forked version of the legendary [`SVGOMG`](https://jakearchibald.github.io/svgomg) by Jake Archibald
+
+## Changelog
+
+v1.17.0
+
+- "Update to SVGO v3.0.4",
+- "New optimisation: Convert one-stop gradients",
+- "New optimisation: Remove XLink namespace"

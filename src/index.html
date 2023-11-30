@@ -3,41 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>{{ title }}</title>
-    <meta name="theme-color" content="#303f9f">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f03">
+    <meta name="viewport" content="width=device-width">
     <link rel="preload" crossorigin as="font" href="fonts/code-latin.woff2">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="{{ iconPath }}">
-    <link rel="icon" href="{{ iconPath }}">
+    <link rel="manifest" href="app.manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ appleTouchIconPath }}">
+    <link rel="icon" href="{{ faviconPath }}" type="image/svg+xml">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="SVGOMG">
+    <meta name="application-name" content="SVGOMFG">
     <meta name="twitter:card" content="summary">
     <meta name="description" content="{{ description }}">
     <meta property="og:description" content="{{ description }}">
-    <meta property="og:image" content="{{ liveBaseUrl }}{{ iconPath }}">
+    <meta property="og:image" content="{{ liveBaseUrl }}{{ ogImagePath }}">
     <meta property="og:title" content="{{ title }}">
-    <script>
-      if ((!location.port || location.port === '80') && location.protocol !== 'https:') {
-        location.protocol = 'https:';
-      }
-
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA-58850134-1', 'auto');
-      ga('send', 'pageview');
-
-      window.version = '{{SVGOMG_VERSION}}';
-
-      // Delay analytics until after the page has loaded, to avoid extending
-      // the browser spinner, and allow higher priority stuff through.
-      addEventListener('load', function() {
-        var script = document.createElement('script');
-        script.src = 'https://www.google-analytics.com/analytics.js';
-        document.head.appendChild(script);
-      });
-    </script>
     <script src="js/page.js" defer></script>
     <style>{{headCSS|safe}}</style>
     <link rel="preload" as="style" href="all.css" onload="rel='stylesheet'">
+    <script src="js/beam.min.js" data-token="7797be8d-4452-4a49-8fb8-13251f192b10" async type="text/javascript"></script>
   </head>
   <body>
     <div class="app-output">
@@ -47,8 +29,8 @@
           <div class="app-title">
             {% include "partials/icons/logo.svg" %}
             <div class="title-text">
-              <h1>SVGOMG</h1>
-              <p>Powered by <a href="https://github.com/svg/svgo">SVGO v{{ SVGO_VERSION }}</a></p>
+              <h1>SVGOMFG</h1>
+              <p>Powered by <a href="https://svgo.dev" target="_blank">SVGO v{{ SVGO_VERSION }}</a></p>
             </div>
           </div>
           <ul>
@@ -75,7 +57,7 @@
               </button>
             </li>
             <li>
-              <a href="https://github.com/jakearchibald/svgomg" class="menu-item">
+              <a href="https://github.com/svg-beauty/svgomfg" class="menu-item">
                 {% include "partials/icons/contribute.svg" %}
                 <span class="menu-item-text">Contribute</span>
               </a>

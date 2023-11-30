@@ -6,7 +6,7 @@
   .track {
     position: relative;
     height: 2px;
-    background-color: rgba(#000, 0.26);
+    background-color: rgba(#000, .26);
     pointer-events: none;
   }
 
@@ -24,10 +24,10 @@
     border-radius: 50%;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%) scale(0.45) translateZ(0);
+    transform: translate(-50%, -50%) scale(.45) translateZ(0);
     display: flex;
     align-items: center;
-    transition: transform 0.1s ease-out;
+    transition: transform .1s ease-out;
   }
 
   .arrow {
@@ -38,7 +38,7 @@
     top: 14px;
     left: 20%;
     transform: translateY(-35%) rotate(45deg) translateZ(0);
-    transition: transform 0.1s ease-out;
+    transition: transform .1s ease-out;
   }
 
   .val {
@@ -47,14 +47,14 @@
     text-align: center;
     width: 100%;
     line-height: 1;
-    font-size: 0.85rem;
+    font-size: .85rem;
     opacity: 0;
-    transition: opacity 0.1s ease-out;
+    transition: opacity .1s ease-out;
     transform: translateZ(0);
   }
 
   // stylelint-disable-next-line selector-no-qualifying-type
-  input[type='range'] {
+  input[type="range"] {
     cursor: inherit;
     position: absolute;
     top: 0;

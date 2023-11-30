@@ -1,47 +1,35 @@
-import {
-  strToEl,
-  escapeHtmlTag,
-  transitionToClass,
-  domReady,
-} from '../utils.js';
+import { strToEl, escapeHtmlTag, transitionToClass, domReady } from '../utils.js'
 
 export default class Changelog {
   constructor(loadedVersion) {
-    this.container = strToEl('<section class="changelog"></section>');
-    this._loadedVersion = loadedVersion;
+    this.container = strToEl('<section class="changelog"></section>')
+    this._loadedVersion = loadedVersion
   }
 
   async showLogFrom(lastLoadedVersion) {
-    if (lastLoadedVersion === this._loadedVersion) return;
-    const changelog = await fetch('changelog.json').then((response) =>
-      response.json(),
-    );
-    let startIndex = 0;
-    let endIndex = 0;
+    if (lastLoadedVersion === this._loadedVersion) return
+    const changelog = await fetch('changelog.json').then((response) => response.json())
+    let startIndex = 0
+    let endIndex = 0
 
     for (const [i, entry] of Object.entries(changelog)) {
       if (entry.version === this._loadedVersion) {
-        startIndex = i;
+        startIndex = i
       } else if (entry.version === lastLoadedVersion) {
-        break;
+        break
       }
 
-      endIndex = i + 1;
+      endIndex = i + 1
     }
 
     const changeList = changelog
       .slice(startIndex, endIndex)
-      // TODO: remove `reduce`
-      // eslint-disable-next-line unicorn/no-array-reduce
-      .reduce((array, entry) => array.concat(entry.changes), [])
-      .map((change) => escapeHtmlTag`<li>${change}</li>`);
+      .flatMap((entry) => entry.changes)
+      .map((change) => escapeHtmlTag`<li>${change}</li>`)
 
-    this.container.append(
-      strToEl('<h1>Updated!</h1>'),
-      strToEl(`<ul>${changeList.join('')}</ul>`),
-    );
+    this.container.append(strToEl('<h1>Updated!</h1>'), strToEl(`<ul>${changeList.join('')}</ul>`))
 
-    await domReady;
-    transitionToClass(this.container);
+    await domReady
+    transitionToClass(this.container)
   }
 }

@@ -6,7 +6,7 @@
   overflow: hidden;
   position: relative;
   line-height: 1;
-  font-size: 0.9rem;
+  font-size: .9rem;
 
   input {
     position: absolute;
@@ -39,6 +39,6 @@
   }
 
   :focus + .selected {
-    background-color: transparentize(#fff, 0.9);
+    background-color: transparentize(#fff, .9);
   }
 }

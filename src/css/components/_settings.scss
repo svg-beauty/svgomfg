@@ -23,7 +23,7 @@
   gap: 19px;
 
   // stylelint-disable-next-line selector-no-qualifying-type
-  input[type='checkbox'] {
+  input[type="checkbox"] {
     position: absolute;
     height: 1px;
     width: 1px;
@@ -36,7 +36,7 @@
       width: 25px;
       height: 25px;
       top: -5px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), inset 0 0 0 2px #3f51b5;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, .5), inset 0 0 0 2px #3f51b5;
     }
   }
 }
@@ -48,7 +48,7 @@
   justify-content: center;
 
   .label-text {
-    margin-bottom: 0.7em;
+    margin-bottom: .7em;
   }
 }
 
@@ -60,7 +60,7 @@
   margin: 0;
   padding: 12px 16px 16px;
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: .9rem;
   color: #767676;
 }
 
@@ -74,7 +74,7 @@
   color: #fff;
   background-color: #3f51b5;
   padding: 9px 14px;
-  font-size: 0.9rem;
+  font-size: .9rem;
   border-radius: 5px;
   position: relative;
   overflow: hidden;

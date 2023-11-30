@@ -1,56 +1,56 @@
 export const idbKeyval = (() => {
-  let dbInstance;
+  let dbInstance
 
   function getDB() {
-    if (dbInstance) return dbInstance;
+    if (dbInstance) return dbInstance
 
     dbInstance = new Promise((resolve, reject) => {
-      const openreq = indexedDB.open('svgo-keyval', 1);
+      const openreq = indexedDB.open('svgo-keyval', 1)
 
       openreq.onerror = () => {
-        reject(openreq.error);
-      };
+        reject(openreq.error)
+      }
 
       openreq.onupgradeneeded = () => {
         // First time setup: create an empty object store
-        openreq.result.createObjectStore('keyval');
-      };
+        openreq.result.createObjectStore('keyval')
+      }
 
       openreq.onsuccess = () => {
-        resolve(openreq.result);
-      };
-    });
+        resolve(openreq.result)
+      }
+    })
 
-    return dbInstance;
+    return dbInstance
   }
 
   async function withStore(type, callback) {
-    const db = await getDB();
+    const db = await getDB()
     return new Promise((resolve, reject) => {
-      const transaction = db.transaction('keyval', type);
-      transaction.oncomplete = () => resolve();
-      transaction.onerror = () => reject(transaction.error);
-      callback(transaction.objectStore('keyval'));
-    });
+      const transaction = db.transaction('keyval', type)
+      transaction.oncomplete = () => resolve()
+      transaction.onerror = () => reject(transaction.error)
+      callback(transaction.objectStore('keyval'))
+    })
   }
 
   return {
     async get(key) {
-      let request;
+      let request
       await withStore('readonly', (store) => {
-        request = store.get(key);
-      });
-      return request.result;
+        request = store.get(key)
+      })
+      return request.result
     },
     set(key, value) {
       return withStore('readwrite', (store) => {
-        store.put(value, key);
-      });
+        store.put(value, key)
+      })
     },
     delete(key) {
       return withStore('readwrite', (store) => {
-        store.delete(key);
-      });
+        store.delete(key)
+      })
     },
-  };
-})();
+  }
+})()

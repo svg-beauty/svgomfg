@@ -19,14 +19,14 @@
     width: 40%;
     max-width: 340px;
     background-color: #fff;
-    box-shadow: 3px 0 16px rgba(0, 0, 0, 0.4);
+    box-shadow: 3px 0 16px rgba(0, 0, 0, .4);
     will-change: transform;
     overflow: hidden auto;
     display: flex;
     flex-flow: column;
 
     &.transition {
-      transition: transform 0.2s ease-out;
+      transition: transform .2s ease-out;
     }
 
     &.hidden {
@@ -44,11 +44,11 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(#000, 0.4);
+    background-color: rgba(#000, .4);
     will-change: opacity;
 
     &.transition {
-      transition: opacity 0.2s ease-in-out;
+      transition: opacity .2s ease-in-out;
     }
 
     &.hidden {
@@ -84,13 +84,13 @@
     &:focus,
     &:hover {
       outline: none;
-      background-color: rgba(#000, 0.1);
+      background-color: rgba(#000, .1);
     }
 
     .icon {
       width: 24px;
       height: 24px;
-      opacity: 0.54;
+      opacity: .54;
       margin-right: 32px;
       flex: none;
     }
@@ -161,7 +161,7 @@
   align-items: center;
   gap: 1rem;
   background-color: #f3f3f3;
-  font-size: 0.9rem;
+  font-size: .9rem;
 
   .logo {
     width: 100%;
@@ -193,5 +193,5 @@
 .title-text {
   display: grid;
   grid-template-rows: max-content max-content;
-  gap: 0.2em;
+  gap: .2em;
 }

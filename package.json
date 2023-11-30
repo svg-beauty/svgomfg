@@ -1,54 +1,53 @@
 {
-  "name": "svgomg",
+  "name": "svgomfg",
   "private": true,
-  "version": "1.16.0",
+  "version": "1.17.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jakearchibald/svgomg.git"
+    "url": "git+https://github.com/svg-beauty/svgomfg.git"
   },
-  "keywords": [],
-  "author": "Jake Archibald",
+  "keywords": [
+    "minify",
+    "svg",
+    "svgo"
+  ],
+  "author": "Marc Redwerkz",
   "bugs": {
-    "url": "https://github.com/jakearchibald/svgomg/issues"
+    "url": "https://github.com/svg-beauty/svgomfg/issues"
   },
-  "homepage": "https://jakearchibald.github.io/svgomg/",
+  "homepage": "https://omfg.svg.beauty",
   "license": "MIT",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^23.0.2",
-    "@rollup/plugin-node-resolve": "^15.0.1",
-    "@rollup/plugin-replace": "^5.0.1",
-    "clean-css": "^5.3.1",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.5",
+    "clean-css": "^5.3.2",
+    "fs-extra": "^11.2.0",
     "gulp": "^4.0.2",
     "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^3.0.0",
-    "gulp-nunjucks": "^5.1.0",
+    "gulp-nunjucks": "^3.1.1",
     "gulp-sass": "^5.1.0",
-    "nanoevents": "^7.0.1",
-    "pako": "^2.0.4",
+    "nanoevents": "^9.0.0",
+    "pako": "^2.1.0",
     "prismjs": "^1.29.0",
-    "rollup": "^2.79.1",
+    "rollup": "^2.0.0",
     "rollup-plugin-terser": "^7.0.2",
-    "sass": "^1.55.0",
+    "sass": "^1.69.5",
     "sirv-cli": "^2.0.2",
-    "stylelint": "^14.14.0",
-    "stylelint-config-twbs-bootstrap": "^6.0.0",
-    "svgo": "^3.0.0",
-    "vinyl-map": "^1.0.2",
-    "xo": "^0.52.4"
+    "stylelint-config-twbs-bootstrap": "^12.0.0",
+    "svgo": "^3.0.4",
+    "vinyl-map": "^1.0.2"
   },
   "scripts": {
     "build": "gulp clean-build",
     "start": "sirv build --port 8080 --dev --no-clear",
     "dev": "gulp dev",
-    "lint": "nr lint:js && nr lint:css",
-    "lint:css": "stylelint src/css/ --rd --risd",
-    "lint:js": "xo",
-    "fix": "xo --fix",
+    "lint": "nr lint:css && nr lint:js",
+    "lint:css": "nlx stylelint src/css/",
+    "lint:js": "nlx xo",
+    "fix": "nlx xo --fix",
     "test": "nr lint && nr build"
-  },
-  "prettier": {
-    "bracketSpacing": true,
-    "singleQuote": true
   },
   "xo": {
     "space": true,
@@ -57,19 +56,12 @@
       "browser"
     ],
     "rules": {
-      "capitalized-comments": "off",
       "no-multi-assign": "off",
-      "no-negated-condition": "off",
-      "no-shadow": "error",
-      "prefer-template": "error",
-      "spaced-comment": "off",
-      "unicorn/explicit-length-check": "off",
-      "unicorn/no-unused-properties": "error",
-      "unicorn/numeric-separators-style": "off",
+      "no-unused-vars": "warn",
+      "unicorn/no-unused-properties": "warn",
       "unicorn/prefer-add-event-listener": "off",
       "unicorn/prefer-module": "off",
-      "unicorn/prevent-abbreviations": "off",
-      "unicorn/require-post-message-target-origin": "off"
+      "unicorn/prevent-abbreviations": "off"
     }
   }
 }
