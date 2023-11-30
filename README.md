@@ -1,8 +1,8 @@
 # 😲SVGOMFG‼️
 
-[![SVGO v3.0.4](https://img.shields.io/badge/svgo-v3.0.4-blue)](https://svgo.dev)
+![PWA](https://www.pwa-shields.com/1.0.0/series/certified/purple.svg)
 [![XO code style](https://shields.io/badge/code_style-5ed9c7?logo=xo&labelColor=gray)](https://github.com/xojs/xo)
-[![Gulp](https://img.shields.io/badge/GULP-%23CF4647.svg?logo=gulp&logoColor=white)](https://gulpjs.com)
+[![SVGO v3.0.4](https://img.shields.io/badge/svgo-v3.0.4-blue)](https://svgo.dev)
 
 [`SVGOMFG`](http://omfg.svg.beauty) is **[`SVGO`](https://svgo.dev)**'s **M**issing **F**uture-proof **G**UI, aiming to expose the majority, if not all the configuration options of the latest SVGO.
 
@@ -35,3 +35,4 @@ v1.17.0
 - "Update to SVGO v3.0.4",
 - "New optimisation: Convert one-stop gradients",
 - "New optimisation: Remove XLink namespace"
+- "Fix many lint errors and PWA install"
