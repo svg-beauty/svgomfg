@@ -1,0 +1,20 @@
+{
+  "name": "SVGOMFG",
+  "short_name": "SVGOMFG",
+  "display": "standalone",
+  "start_url": "./",
+  "background_color": "#ccc",
+  "theme_color": "red",
+  "icons": [
+    {
+      "src": "imgs/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "imgs/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

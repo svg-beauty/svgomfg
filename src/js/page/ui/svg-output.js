@@ -7,7 +7,7 @@ export default class SvgOutput {
     this.container = strToEl(
       '<div class="svg-output">' +
         '<div class="svg-container">' +
-          '<img class="svg-frame" sandbox="allow-scripts" scrolling="no" title="Loaded SVG file"/>' +
+          '<iframe class="svg-frame" sandbox="allow-scripts" scrolling="no" title="Loaded SVG file"/>' +
         '</div>' +
       '</div>'
     )

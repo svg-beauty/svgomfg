@@ -3,19 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>{{ title }}</title>
+    <meta name="color-theme" content="light">
+    <meta name="description" content="{{ description }}">
     <meta name="theme-color" content="#f03">
     <meta name="viewport" content="width=device-width">
-    <link rel="preload" crossorigin as="font" href="fonts/code-latin.woff2">
-    <link rel="manifest" href="app.manifest.json">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ appleTouchIconPath }}">
+    <link rel="preload" href="fonts/code-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link href=/manifest.webmanifest rel=manifest crossorigin=anonymous>
+    <link rel="apple-touch-icon" href="{{ appleTouchIconPath }}" sizes="180x180">
     <link rel="icon" href="{{ faviconPath }}" type="image/svg+xml">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="application-name" content="SVGOMFG">
-    <meta name="twitter:card" content="summary">
-    <meta name="description" content="{{ description }}">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:description" content="{{ description }}">
+    <meta property="twitter:image" content="{{ liveBaseUrl }}{{ ogImagePath }}">
+    <meta property="twitter:title" content="{{ title }}">
+    <meta property="twitter:url" content="{{ liveBaseUrl }}">
     <meta property="og:description" content="{{ description }}">
     <meta property="og:image" content="{{ liveBaseUrl }}{{ ogImagePath }}">
     <meta property="og:title" content="{{ title }}">
+    <meta property="og:url" content="{{ liveBaseUrl }}">
+    <meta property="og:type" content="website">
     <script src="js/page.js" defer></script>
     <style>{{headCSS|safe}}</style>
     <link rel="preload" as="style" href="all.css" onload="rel='stylesheet'">
@@ -53,17 +60,24 @@
             <li>
               <button class="load-demo unbutton menu-item" type="button">
                 {% include "partials/icons/demo.svg" %}
-                <span class="menu-item-text">Demo</span>
+                <span class="menu-item-text">Load Demo</span>
               </button>
             </li>
             <li>
+              <a href="https://svgo.dev/docs/preset-default/" class="menu-item">
+                {% include "partials/icons/docs.svg" %}
+                <span class="menu-item-text">Read Docs</span>
+              </a>
+            </li>
+            <li>
               <a href="https://github.com/svg-beauty/svgomfg" class="menu-item">
-                {% include "partials/icons/contribute.svg" %}
-                <span class="menu-item-text">Contribute</span>
+                {% include "partials/icons/code.svg" %}
+                <span class="menu-item-text">Open Source</span>
               </a>
             </li>
           </ul>
-          <div class="menu-extra"></div>
+          <div class="menu-extra">
+          </div>
         </nav>
       </div>
       <div class="toolbar">
@@ -96,38 +110,38 @@
           <div class="results-container-mobile"></div>
           <div class="settings-scroller">
             <section class="global">
-              <h1 class="settings-sub-heading">Global settings</h1>
-              <label class="setting-item-toggle">
-                <input type="checkbox" name="original">
-                {% include "partials/material-switch.html" %}
-                Show original
-              </label>
+              <h1 class="settings-sub-heading">Global Settings</h1>
               <label class="setting-item-toggle">
                 <input type="checkbox" name="gzip" checked>
                 {% include "partials/material-switch.html" %}
-                Compare gzipped
-              </label>
-              <label class="setting-item-toggle">
-                <input type="checkbox" name="pretty">
-                {% include "partials/material-switch.html" %}
-                Prettify markup
+                Compare GZipped
               </label>
               <label class="setting-item-toggle">
                 <input type="checkbox" name="multipass">
                 {% include "partials/material-switch.html" %}
                 Multipass
               </label>
+              <label class="setting-item-toggle">
+                <input type="checkbox" name="pretty">
+                {% include "partials/material-switch.html" %}
+                Prettify Markup
+              </label>
+              <label class="setting-item-toggle">
+                <input type="checkbox" name="original">
+                {% include "partials/material-switch.html" %}
+                Show Original
+              </label>
               <label class="setting-item-range">
-                <span class="label-text">Number precision</span>
+                <span class="label-text">Number Precision</span>
                 <input type="range" min="0" max="8" step="1" value="3" name="floatPrecision">
               </label>
               <label class="setting-item-range">
-                <span class="label-text">Transform precision</span>
+                <span class="label-text">Transform Precision</span>
                 <input type="range" min="0" max="8" step="1" value="5" name="transformPrecision">
               </label>
             </section>
             <section class="plugins">
-              <h1 class="settings-sub-heading">Features</h1>
+              <h1 class="settings-sub-heading">Featured Plugins</h1>
               {% for plugin in plugins %}
                 <label class="setting-item-toggle">
                   <input type="checkbox"

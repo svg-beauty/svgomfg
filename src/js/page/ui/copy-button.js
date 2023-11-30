@@ -2,14 +2,14 @@ import FloatingActionButton from './floating-action-button.js'
 
 export default class CopyButton extends FloatingActionButton {
   constructor() {
-    const title = 'Copy as text'
+    const title = 'Copy Source Code to Clipboard'
 
     super({
       title,
       iconSvg:
         // prettier-ignore
         '<svg aria-hidden="true" class="icon" viewBox="0 0 24 24">' +
-          '<path d="M16 1H4C3 1 2 2 2 3v14h2V3h12V1zm3 4H8C7 5 6 6 6 7v14c0 1 1 2 2 2h11c1 0 2-1 2-2V7c0-1-1-2-2-2zm0 16H8V7h11v14z"/>' +
+          '<path d="M9 18q-.825 0-1.412-.587T7 16V4q0-.825.588-1.412T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.587 1.413T18 18H9Zm0-2h9V4H9v12Zm-4 6q-.825 0-1.412-.587T3 20V7q0-.425.288-.712T4 6q.425 0 .713.288T5 7v13h10q.425 0 .713.288T16 21q0 .425-.288.713T15 22H5Zm4-6V4v12Z"/>' +
         '</svg>',
     })
 

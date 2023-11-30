@@ -17,7 +17,6 @@ const rollupCommon = require('@rollup/plugin-commonjs')
 const rollupReplace = require('@rollup/plugin-replace')
 const { terser: rollupTerser } = require('rollup-plugin-terser')
 const fsExtra = require('fs-extra')
-const chokidar = require('chokidar')
 
 const IS_DEV_TASK = process.argv.includes('dev') || process.argv.includes('--dev')
 
@@ -87,8 +86,15 @@ function copy() {
       '!src/imgs/maskable copy.svg',
       '!src/imgs/maskable copy 2.svg',
       '!src/imgs/og-image.svg',
-      'src/*.json',
+      'src/imgs/icon-192.png',
+      'src/imgs/icon-512.png',
+      'src/imgs/og-image.png',
+      'src/apple-touch-icon.png',
+      'src/favicon.ico',
+      'src/favicon.svg',
+      'src/manifest.webmanifest',
       'src/robots.txt',
+      'src/*.json',
     ])
     .pipe(gulp.dest('build'))
 }
@@ -119,9 +125,9 @@ async function html() {
         liveBaseUrl: 'https://omfg.svg.beauty',
         title: `SVGOMFG - SVGO's Missing GUI`,
         description: 'Easy & visual compression of SVG images.',
-        appleTouchIconPath: 'apple-touch-icon.png',
-        faviconPath: 'imgs/favicon.svg',
-        ogImage: 'imgs/og-image.png',
+        appleTouchIconPath: '/apple-touch-icon.png',
+        faviconPath: '/favicon.svg',
+        ogImagePath: '/imgs/og-image.png',
       })
     )
     .pipe(gulpif(!IS_DEV_TASK, gulpHtmlmin(buildConfig.htmlmin)))

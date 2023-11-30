@@ -43,7 +43,7 @@
   },
   "scripts": {
     "build": "gulp clean-build",
-    "start": "sirv build --port 8080 --dev --no-clear",
+    "start": "sirv build --port 8888 --dev --no-clear",
     "dev": "gulp dev",
     "lint": "nr lint:css && nr lint:js",
     "lint:css": "nlx stylelint src/css/",
