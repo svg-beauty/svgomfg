@@ -83,11 +83,10 @@ function copy() {
       // Exclude the test-svgs files except for `car-lite.svg`
       // which is used in the demo
       '!src/test-svgs/!(car-lite.svg)',
-      '!src/imgs/favicon.svg',
-      '!src/imgs/icon-192.svg',
-      '!src/imgs/icon-512.svg',
-      '!src/imgs/maskable.svg',
-      '!src/imgs/og-image.png',
+      '!src/imgs/icon.png',
+      '!src/imgs/maskable copy.svg',
+      '!src/imgs/maskable copy 2.svg',
+      '!src/imgs/og-image.svg',
       'src/*.json',
       'src/robots.txt',
     ])
@@ -120,7 +119,9 @@ async function html() {
         liveBaseUrl: 'https://omfg.svg.beauty',
         title: `SVGOMFG - SVGO's Missing GUI`,
         description: 'Easy & visual compression of SVG images.',
-        iconPath: 'imgs/icon.png',
+        appleTouchIconPath: 'apple-touch-icon.png',
+        faviconPath: 'imgs/favicon.svg',
+        ogImage: 'imgs/og-image.png',
       })
     )
     .pipe(gulpif(!IS_DEV_TASK, gulpHtmlmin(buildConfig.htmlmin)))

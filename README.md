@@ -1,7 +1,7 @@
 # 😲SVGOMFG‼️
 
 [![SVGO v3.0.4](https://img.shields.io/badge/svgo-v3.0.4-blue)](https://svgo.dev)
-[![Code Style Standard](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![XO code style](https://shields.io/badge/code_style-5ed9c7?logo=xo&labelColor=gray)](https://github.com/xojs/xo)
 
 [`SVGOMFG`](http://omfg.svg.beauty) is **[`SVGO`](https://svgo.dev)**'s **M**issing **F**uture-proof **G**UI, aiming to expose the majority, if not all the configuration options of the latest SVGO.
 

@@ -23,13 +23,15 @@ export default class SvgOutput {
   }
 
   setSvg({ text, width, height }) {
-    const nextLoad = this._nextLoadPromise()
-    const blob = new Blob([text], { type: 'image/svg+xml' })
-    const url = URL.createObjectURL(blob)
-    this._svgFrame.src = url
-    this._svgFrame.style.width = `${width}px`
-    this._svgFrame.style.height = `${height}px`
-    return nextLoad
+    // TODO: revisit this
+    // I would rather use blob urls, but they don't work in Firefox
+    // All the internal refs break.
+    // https://bugzilla.mozilla.org/show_bug.cgi?id=1125667
+    const nextLoad = this._nextLoadPromise();
+    this._svgFrame.src = `data:image/svg+xml,${encodeURIComponent(text)}`;
+    this._svgFrame.style.width = `${width}px`;
+    this._svgFrame.style.height = `${height}px`;
+    return nextLoad;
   }
 
   reset() {

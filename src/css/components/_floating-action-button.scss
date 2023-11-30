@@ -35,11 +35,11 @@
   }
 
   .ripple {
-    background-color: #00bcd4;
+    background-color: #fff;
   }
 
   &.active {
-    background-color: #00bcd4;
+    background-color: #fff;
     color: #fff;
 
     .ripple {
@@ -51,7 +51,7 @@
     width: 56px;
     height: 56px;
     border-radius: 28px;
-    background-color: #00bcd4;
+    background-color: #fff;
 
     .icon {
       fill: #fff;
