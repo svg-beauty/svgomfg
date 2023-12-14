@@ -1,5 +1,14 @@
 [
   {
+    "version": "1.18.0",
+    "changes":[
+      "Update to SVGO v3.1.0",
+      "Use bun instead of npm",
+      "Remove package-lock.json",
+      "Rename Stylelint Config & Add JSON Schema"
+    ]
+  },
+  {
     "version": "1.17.0",
     "changes":[
       "Update to SVGO v3.0.4",
